@@ -71,12 +71,6 @@ echo add rule layer=um actiontype=block>>%netsh_scr%
 echo add condition field=if_uuid matchtype=equal data=df1941c5-fe89-4e79-bf10-463657acf44d>>%netsh_scr%
 echo add filter>>%netsh_scr%
 
-:: Print Spooler
-echo add rule layer=um actiontype=block>>%netsh_scr%
-echo add condition field=if_uuid matchtype=equal data=12345678-1234-abcd-ef00-0123456789ab>>%netsh_scr%
-echo add filter>>%netsh_scr%
-
-
 echo quit>>%netsh_scr%
 
 type %netsh_scr% | netsh
