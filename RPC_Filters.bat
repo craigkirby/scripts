@@ -6,6 +6,10 @@ setlocal
 :: https://vulners.com/openvas/OPENVAS:1361412562310108044
 :: https://github.com/p33kab00/dcerpc-pipe-scan/blob/master/dcerpc-pipe-scan.py
 
+:: Issues
+:: Services: Breaks certain services e.g. Veeam backup
+:: Remote Registry: Dial-In tab on user properties will show 'Access Denied' if filter is deployed to Domain Controller
+
 if "%1"=="disable" call :DISABLERPCFILTERS
 if "%1"=="enable" call :ENABLERPCFILTERS
 goto :EOF
